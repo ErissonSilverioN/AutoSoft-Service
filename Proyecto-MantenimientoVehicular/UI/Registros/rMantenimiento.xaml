@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_MantenimientoVehicular.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Mantenimiento" Height="700" Width="870" WindowStyle="ToolWindow" ResizeMode="NoResize">
+        Title="Registro de Mantenimiento" Height="700" Width="870" WindowStyle="ToolWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="MantenimientoId" HorizontalAlignment="Left" Margin="27,35,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontWeight="Bold" FontSize="14"/>
         <Label Content="Fecha" HorizontalAlignment="Left" Margin="628,37,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontWeight="Bold" FontSize="14"/>
@@ -18,10 +18,24 @@
         <Label Content="Importe" HorizontalAlignment="Left" Margin="630,231,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontWeight="Bold" FontSize="14"/>
 
 
-        <!--TextBox-->
-
-        <TextBox x:Name="idTextBox1" HorizontalAlignment="Left" Margin="149,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" PreviewTextInput="idTextBox1_PreviewTextInput"/>
-        <DatePicker x:Name="fechaDatePicker" HorizontalAlignment="Left" Margin="684,39,0,0" VerticalAlignment="Top" Width="113"/>
+        <TextBox x:Name="idTextBox1" HorizontalAlignment="Left" Margin="149,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" PreviewTextInput="idTextBox1_PreviewTextInput">
+            <TextBox.Text>
+                <Binding Path="MantenimientoId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <DatePicker x:Name="fechaDatePicker" HorizontalAlignment="Left" Margin="684,39,0,0" VerticalAlignment="Top" Width="113">
+            <DatePicker.SelectedDate>
+                <Binding Path="Fecha" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </DatePicker.SelectedDate>
+        </DatePicker>
         <ComboBox x:Name="clienteComboBox" HorizontalAlignment="Left" Margin="34,180,0,0" VerticalAlignment="Top" Width="167"
                   SelectedValue="{Binding ClienteId,Mode=TwoWay}">
 
@@ -55,7 +69,7 @@
         <Button x:Name="buscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="247,32,0,0" VerticalAlignment="Top" Height="37" Width="105" Click="buscarButton_Click" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="14">
 
         </Button>
-        <Button x:Name="agregararticuloButton" Content="+" HorizontalAlignment="Left" Margin="221,233,0,0" VerticalAlignment="Top" Height="21" Width="20" FontWeight="Bold" Click="agregararticuloButton_Click"/>
+        <Button x:Name="agregararticuloButton" Content="+" HorizontalAlignment="Left" Margin="211,233,0,0" VerticalAlignment="Top" Height="21" Width="20" FontWeight="Bold" Click="agregararticuloButton_Click"/>
         <Button x:Name="agregarButton" Content="+" HorizontalAlignment="Left" Margin="782,228,0,0" VerticalAlignment="Top" Width="44" Height="29" FontSize="18" FontWeight="Bold" Click="agregarButton_Click">
 
         </Button>
@@ -104,16 +118,18 @@
         <Label Content="Disp." HorizontalAlignment="Left" Margin="247,231,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bell MT" FontSize="14"/>
         <TextBox x:Name="disponibleTextBox" HorizontalAlignment="Left" Margin="291,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" IsReadOnly="True"/>
         <Label Content="Servicios" HorizontalAlignment="Left" Margin="29,93,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bell MT" FontSize="14" Height="29" Width="70"/>
-        <ComboBox x:Name="serviciosComboBox" HorizontalAlignment="Left" Margin="33,119,0,0" VerticalAlignment="Top" Width="352"/>
-        <Label Content="Subtotal" HorizontalAlignment="Left" Margin="693,498,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="subtotalTextBox01" HorizontalAlignment="Left" Margin="755,499,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="72">
+        <ComboBox x:Name="serviciosComboBox" HorizontalAlignment="Left" Margin="33,119,0,0" VerticalAlignment="Top" Width="352"
+                  SelectedValue="{Binding Servicios,Mode=TwoWay}">
+        </ComboBox>
+        <TextBox x:Name="TextBoxSubtotal" HorizontalAlignment="Left" Margin="755,500,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71">
             <TextBox.Text>
-                <Binding Path="Subtotal" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                <Binding Path="SubTotal" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                     <Binding.ValidationRules>
                         <ExceptionValidationRule/>
-                    </Binding.ValidationRules>  
+                    </Binding.ValidationRules>
                 </Binding>
             </TextBox.Text>
         </TextBox>
+        <Label Content="Subtotal" HorizontalAlignment="Left" Margin="692,499,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
     </Grid>
 </Window>

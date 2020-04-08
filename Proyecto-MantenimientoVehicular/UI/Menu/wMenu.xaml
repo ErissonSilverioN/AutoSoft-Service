@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_MantenimientoVehicular.UI.Menu"
         mc:Ignorable="d"
-        Title="Menu" Height="500" Width="500" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowState="Normal">
+        Title="Menu" Height="400" Width="400" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowState="Normal">
     <Window.Background>
         <ImageBrush TileMode="None" Stretch="None"/>
     </Window.Background>
     <Grid>
         <Menu Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
-            <MenuItem Header="File"></MenuItem>
+            <MenuItem Header="File" Background="#FFE8CC6F" BorderBrush="#FF13130D" Foreground="#FF131313" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"></MenuItem>
 
-            <MenuItem Header="Registros">
+            <MenuItem Header="Registros" Background="#FFE8CC6F" BorderBrush="#FF1D1D1B" Foreground="#FF1D1D1C" FontFamily="Bell MT" FontSize="14" FontWeight="Bold">
                 <!--Registros-->
 
                 <MenuItem x:Name="registroarticulo" Header="Registrar Articulo" Click="registroarticulo_Click">
@@ -29,7 +29,7 @@
 
             </MenuItem>
 
-            <MenuItem Header="Consultas">
+            <MenuItem Header="Consultas" Background="#FFE8CC6F" BorderBrush="#FF0F0F0E" Foreground="#FF1D1D1C" FontFamily="Bell MT" FontSize="14" FontWeight="Bold">
                 <!--Consultas-->
 
                 <MenuItem x:Name="consultararticulo" Header="Consultar Articulo" Click="consultararticulo_Click"/>
@@ -42,7 +42,7 @@
                 <MenuItem x:Name="consultaVehiculo" Header="Consultar Vehiculo" Click="consultaVehiculo_Click"/>
 
             </MenuItem>
-            <MenuItem Header="Ayuda"></MenuItem>
+            <MenuItem Header="Ayuda" Background="#FFE8CC6F" BorderBrush="#FF1D1D1A" Foreground="#FF1D1D1C" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"></MenuItem>
         </Menu>
 
 

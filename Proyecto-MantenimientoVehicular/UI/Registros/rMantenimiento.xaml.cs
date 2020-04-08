@@ -61,7 +61,8 @@ namespace Proyecto_MantenimientoVehicular.UI.Registros
             fechaDatePicker.SelectedDate = DateTime.Now;
             proxmantDatePicker.SelectedDate = DateTime.Now;
             detalleDataGrid.ItemsSource = string.Empty;
-            subtotalTextBox01.Text =  "0";
+            TextBoxSubtotal.Text =  "0";
+            itebisTextBox.Text = "0";
 
         }
 
@@ -213,7 +214,7 @@ namespace Proyecto_MantenimientoVehicular.UI.Registros
             }
 
             totalTextBox.Text = Convert.ToString(Total);
-            subtotalTextBox01.Text = Convert.ToString(Subtotal);
+            TextBoxSubtotal.Text = Convert.ToString(Subtotal);
             itebisTextBox.Text = Convert.ToString(Itebis);
 
             
