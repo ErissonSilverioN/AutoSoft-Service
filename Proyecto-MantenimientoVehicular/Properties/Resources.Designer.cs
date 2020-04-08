@@ -63,6 +63,106 @@ namespace Proyecto_MantenimientoVehicular.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] addarticulo {
+            get {
+                object obj = ResourceManager.GetObject("addarticulo", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] carticulo {
+            get {
+                object obj = ResourceManager.GetObject("carticulo", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ccliente {
+            get {
+                object obj = ResourceManager.GetObject("ccliente", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] centrada {
+            get {
+                object obj = ResourceManager.GetObject("centrada", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] cmantenimiento {
+            get {
+                object obj = ResourceManager.GetObject("cmantenimiento", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] cpedidos {
+            get {
+                object obj = ResourceManager.GetObject("cpedidos", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] cproveedor {
+            get {
+                object obj = ResourceManager.GetObject("cproveedor", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] cusuario {
+            get {
+                object obj = ResourceManager.GetObject("cusuario", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] cvehiculo {
+            get {
+                object obj = ResourceManager.GetObject("cvehiculo", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] login {
+            get {
+                object obj = ResourceManager.GetObject("login", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Logo {
             get {
                 object obj = ResourceManager.GetObject("Logo", resourceCulture);

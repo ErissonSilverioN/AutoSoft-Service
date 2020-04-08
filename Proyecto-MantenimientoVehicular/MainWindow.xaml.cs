@@ -21,6 +21,11 @@ namespace Proyecto_MantenimientoVehicular
             InitializeComponent();
         }
 
+        private void LimpiarCampos()
+        {
+            usuarioTextBox1.Text = string.Empty;
+            contraseñaPasswordBox1.Password = string.Empty;
+        }
        
 
         public void IniciarSesion()
@@ -44,6 +49,7 @@ namespace Proyecto_MantenimientoVehicular
                     wMenu menuprincipal = new wMenu();
                     menuprincipal.Show();
                     this.Hide();
+                    LimpiarCampos();
                 }
                 else
                 {
@@ -67,6 +73,8 @@ namespace Proyecto_MantenimientoVehicular
         {
             if (usuarioTextBox1.Text == "Admin" && contraseñaPasswordBox1.Password == "Admin")
             {
+                LimpiarCampos();
+
                 wMenu menuprimcipal = new wMenu();
                 menuprimcipal.ShowDialog();
                 this.Close();
@@ -75,6 +83,7 @@ namespace Proyecto_MantenimientoVehicular
             else
             {
                 IniciarSesion();
+                
             }
 
         }

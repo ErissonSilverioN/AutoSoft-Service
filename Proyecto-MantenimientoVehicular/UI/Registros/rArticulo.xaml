@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Proyecto_MantenimientoVehicular.UI.Registros"
         mc:Ignorable="d"
         Title="Registro de Articulos" Height="360" Width="600" ResizeMode="NoResize" WindowStyle="ToolWindow">
-    <Grid>
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
         <Label Content="ArtículoId" HorizontalAlignment="Left" Margin="23,30,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
         <Label Content="Artículo" HorizontalAlignment="Left" Margin="24,107,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
         <Label Content="Precio/U" HorizontalAlignment="Left" Margin="24,142,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
@@ -39,16 +39,19 @@
                 </Binding>
             </TextBox.Text>
         </TextBox>
-        <Button x:Name="nuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="36,261,0,0" VerticalAlignment="Top" Height="41" Width="124" FontSize="14" FontWeight="Bold" Click="nuevoButton_Click" BorderBrush="Gray" FontFamily="Book Antiqua">
+        <Button x:Name="nuevoButton" Content="      Nuevo" HorizontalAlignment="Left" Margin="36,261,0,0" VerticalAlignment="Top" Height="41" Width="124" FontSize="14" FontWeight="Bold" Click="nuevoButton_Click" BorderBrush="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" FontFamily="Book Antiqua">
+
 
         </Button>
-        <Button x:Name="guardrButton" Content="Guardar" HorizontalAlignment="Left" Margin="221,261,0,0" VerticalAlignment="Top" Height="41" Width="142" FontSize="14" FontWeight="Bold" Click="guardrButton_Click" FontFamily="Book Antiqua">
+        <Button x:Name="guardrButton" Content="      Guardar" HorizontalAlignment="Left" Margin="221,261,0,0" VerticalAlignment="Top" Height="41" Width="142" FontSize="14" FontWeight="Bold" Click="guardrButton_Click" FontFamily="Book Antiqua" ClickMode="Press" BorderBrush="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}">
+
 
         </Button>
-        <Button x:Name="eliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="413,261,0,0" VerticalAlignment="Top" Height="41" Width="134" FontSize="14" FontWeight="Bold" Click="eliminarButton_Click" FontFamily="Book Antiqua">
+        <Button x:Name="eliminarButton" Content="      Eliminar" HorizontalAlignment="Left" Margin="413,261,0,0" VerticalAlignment="Top" Height="41" Width="134" FontSize="14" FontWeight="Bold" Click="eliminarButton_Click" FontFamily="Book Antiqua" BorderBrush="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}">
+
 
         </Button>
-        <Button x:Name="buscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="181,29,0,0" VerticalAlignment="Top" Height="31" Width="109" FontSize="14" FontWeight="Bold" Click="buscarButton_Click" FontFamily="Book Antiqua">
+        <Button x:Name="buscarButton" Content="           Buscar" HorizontalAlignment="Left" Margin="181,21,0,0" VerticalAlignment="Top" Height="41" Width="109" FontSize="14" FontWeight="Bold" Click="buscarButton_Click" FontFamily="Book Antiqua" OpacityMask="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}">
 
         </Button>
         <DatePicker x:Name="fechaDatePicker" HorizontalAlignment="Left" Margin="429,32,0,0" VerticalAlignment="Top" Width="119">

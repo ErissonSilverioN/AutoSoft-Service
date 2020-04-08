@@ -7,14 +7,14 @@
         xmlns:PH="clr-namespace:Proyecto_MantenimientoVehicular.Entidades"
         mc:Ignorable="d"
         Title="Login" Height="350" Width="410"  WindowStartupLocation="CenterScreen" ResizeMode="NoResize" ShowInTaskbar="False" WindowStyle="ToolWindow">
-    <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
-        <Label Content="Usuario" HorizontalAlignment="Left" Margin="49,159,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontWeight="Bold" FontSize="14"/>
-        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="46,184,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontWeight="Bold" FontSize="14"/>
-        <TextBox x:Name="usuarioTextBox1" HorizontalAlignment="Left" Margin="129,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
-        <PasswordBox x:Name="contraseñaPasswordBox1" HorizontalAlignment="Left" Margin="128,189,0,0" VerticalAlignment="Top" Width="172"/>
-        <Button x:Name="iniciarsesionButton" Content="Iniciar Sesion" HorizontalAlignment="Left" Margin="150,223,0,0" VerticalAlignment="Top" Height="31" Width="124" Click="iniciarsesionButton_Click"/>
-        <Button x:Name="salirButton1" Content="Salir" HorizontalAlignment="Left" Margin="169,262,0,0" VerticalAlignment="Top" Height="29" Width="86" Click="salirButton1_Click"/>
-        <Image HorizontalAlignment="Center" Height="118" Margin="0,24,0,0" VerticalAlignment="Top" Width="122" Source="/Resources/login.png"/>
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+        <Label Content="Usuario" HorizontalAlignment="Left" Margin="49,170,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="45,195,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="usuarioTextBox1" HorizontalAlignment="Left" Margin="129,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <PasswordBox x:Name="contraseñaPasswordBox1" HorizontalAlignment="Left" Margin="128,199,0,0" VerticalAlignment="Top" Width="172"/>
+        <Button x:Name="iniciarsesionButton" Content="Iniciar Sesion" HorizontalAlignment="Left" Margin="149,229,0,0" VerticalAlignment="Top" Height="31" Width="124" Click="iniciarsesionButton_Click" FontFamily="Book Antiqua" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="salirButton1" Content="Salir" HorizontalAlignment="Left" Margin="169,268,0,0" VerticalAlignment="Top" Height="29" Width="86" Click="salirButton1_Click" FontFamily="Book Antiqua" FontSize="14" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="132" Margin="140,21,0,0" VerticalAlignment="Top" Width="158" Source="/Resources/login.png"/>
 
 
 

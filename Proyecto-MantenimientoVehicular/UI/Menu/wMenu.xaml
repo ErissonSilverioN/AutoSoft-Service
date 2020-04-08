@@ -5,44 +5,109 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_MantenimientoVehicular.UI.Menu"
         mc:Ignorable="d"
-        Title="Menu" Height="400" Width="400" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowState="Normal">
+        Title="Menu" Height="600" Width="600" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowState="Normal">
     <Window.Background>
         <ImageBrush TileMode="None" Stretch="None"/>
     </Window.Background>
     <Grid>
-        <Menu Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
-            <MenuItem Header="File" Background="#FFE8CC6F" BorderBrush="#FF13130D" Foreground="#FF131313" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"></MenuItem>
+        <Menu>
+            <Menu.Background>
+                <ImageBrush ImageSource="/Resources/Logo.png"/>
+            </Menu.Background>
+            <MenuItem Header="File" BorderBrush="#FF13130D" Foreground="#FF261E74" FontFamily="Bell MT" FontSize="16" FontWeight="Bold" Background="#FFF0DB99"/>
 
-            <MenuItem Header="Registros" Background="#FFE8CC6F" BorderBrush="#FF1D1D1B" Foreground="#FF1D1D1C" FontFamily="Bell MT" FontSize="14" FontWeight="Bold">
+            <MenuItem Header="Registros" Background="#FFF0DB99" BorderBrush="#FF1D1D1B" Foreground="#FF271F78" FontFamily="Bell MT" FontSize="16" FontWeight="Bold">
                 <!--Registros-->
 
                 <MenuItem x:Name="registroarticulo" Header="Registrar Articulo" Click="registroarticulo_Click">
-
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/addarticulo.png"/>
+                    </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem x:Name="registrarcliente" Header="Registrar Cliente" Click="registrarcliente_Click"/>
-                <MenuItem x:Name="registrarentradaart" Header="Registrar Entrada de Articulo" Click="registrarentradaart_Click"/>
-                <MenuItem x:Name="registrarmantenimiento" Header="Registrar Mantenimiento" Click="registrarmantenimiento_Click"/>
-                <MenuItem x:Name="registroproveedor" Header="Registrar Proveedor" Click="registroproveedor_Click"/>
-                <MenuItem x:Name="registrarpedidosproveedor" Header="Registrar Pedidos a Proveedores" Click="registrarpedidosproveedor_Click"/>
-                <MenuItem x:Name="registrousuario" Header="Registrar Usuario" Click="registrousuario_Click"/>
-                <MenuItem x:Name="registrovehiculo" Header="Registrar Vehiculo" Click="registrovehiculo_Click"/>
+                <MenuItem x:Name="registrarcliente" Header="Registrar Cliente" Click="registrarcliente_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/addcliente.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="registrarentradaart" Header="Registrar Entrada de Articulo" Click="registrarentradaart_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/addentrada.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="registrarmantenimiento" Header="Registrar Mantenimiento" Click="registrarmantenimiento_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/addmantenimiento.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="registroproveedor" Header="Registrar Proveedor" Click="registroproveedor_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/addproveedor.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="registrarpedidosproveedor" Header="Registrar Pedidos a Proveedores" Click="registrarpedidosproveedor_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/addpedido.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="registrousuario" Header="Registrar Usuario" Click="registrousuario_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/addusuario.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="registrovehiculo" Header="Registrar Vehiculo" Click="registrovehiculo_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/addvehiculo.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
 
             </MenuItem>
 
-            <MenuItem Header="Consultas" Background="#FFE8CC6F" BorderBrush="#FF0F0F0E" Foreground="#FF1D1D1C" FontFamily="Bell MT" FontSize="14" FontWeight="Bold">
+            <MenuItem Header="Consultas" Background="#FFF0DB99" BorderBrush="#FF0F0F0E" Foreground="#FF271F78" FontFamily="Bell MT" FontSize="16" FontWeight="Bold">
                 <!--Consultas-->
 
-                <MenuItem x:Name="consultararticulo" Header="Consultar Articulo" Click="consultararticulo_Click"/>
-                <MenuItem x:Name="consultaCliente" Header="Consultar Cliente" Click="consultaCliente_Click"/>
-                <MenuItem x:Name="consultaentradaarticulo" Header="Consultar Entrada de articulo" Click="consultaentradaarticulo_Click"/>
-                <MenuItem x:Name="consultarmantenimiento" Header="Consultar Mantenimiento" Click="consultarmantenimiento_Click"/>
-                <MenuItem x:Name="consultaProveedores" Header="Consultar Proveedor" Click="consultaProveedores_Click"/>
-                <MenuItem x:Name="consultarpedido" Header="Consultar Pedido a Proveedor" Click="consultarpedido_Click"/>
-                <MenuItem x:Name="consultaUsuario" Header="Consultar Usuarios" Click="consultaUsuario_Click"/>
-                <MenuItem x:Name="consultaVehiculo" Header="Consultar Vehiculo" Click="consultaVehiculo_Click"/>
+                <MenuItem x:Name="consultararticulo" Header="Consultar Articulo" Click="consultararticulo_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/carticulo.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="consultaCliente" Header="Consultar Cliente" Click="consultaCliente_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/ccliente.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="consultaentradaarticulo" Header="Consultar Entrada de articulo" Click="consultaentradaarticulo_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/centrada.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="consultarmantenimiento" Header="Consultar Mantenimiento" Click="consultarmantenimiento_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/cmantenimiento.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="consultaProveedores" Header="Consultar Proveedor" Click="consultaProveedores_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/cproveedor.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="consultarpedido" Header="Consultar Pedido a Proveedor" Click="consultarpedido_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/cpedidos.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="consultaUsuario" Header="Consultar Usuarios" Click="consultaUsuario_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/cusuario.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="consultaVehiculo" Header="Consultar Vehiculo" Click="consultaVehiculo_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/cvehiculo.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
 
             </MenuItem>
-            <MenuItem Header="Ayuda" Background="#FFE8CC6F" BorderBrush="#FF1D1D1A" Foreground="#FF1D1D1C" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"></MenuItem>
+            <MenuItem Header="Ayuda" Background="#FFF0DB99" BorderBrush="#FF1D1D1A" Foreground="#FF271F78" FontFamily="Bell MT" FontSize="16" FontWeight="Bold"></MenuItem>
         </Menu>
 
 
