@@ -14,7 +14,7 @@
         <PasswordBox x:Name="contraseñaPasswordBox1" HorizontalAlignment="Left" Margin="128,189,0,0" VerticalAlignment="Top" Width="172"/>
         <Button x:Name="iniciarsesionButton" Content="Iniciar Sesion" HorizontalAlignment="Left" Margin="150,223,0,0" VerticalAlignment="Top" Height="31" Width="124" Click="iniciarsesionButton_Click"/>
         <Button x:Name="salirButton1" Content="Salir" HorizontalAlignment="Left" Margin="169,262,0,0" VerticalAlignment="Top" Height="29" Width="86" Click="salirButton1_Click"/>
-        <Image HorizontalAlignment="Left" Height="118" Margin="147,22,0,0" VerticalAlignment="Top" Width="122" Source="/login-logo-png-5.png"/>
+        <Image HorizontalAlignment="Center" Height="118" Margin="0,24,0,0" VerticalAlignment="Top" Width="122" Source="/Resources/login.png"/>
 
 
 

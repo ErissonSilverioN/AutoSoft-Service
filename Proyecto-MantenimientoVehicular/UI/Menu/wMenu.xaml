@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_MantenimientoVehicular.UI.Menu"
         mc:Ignorable="d"
-        Title="Menu" Height="500" Width="500">
+        Title="Menu" Height="500" Width="500" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowState="Normal">
     <Window.Background>
         <ImageBrush TileMode="None" Stretch="None"/>
     </Window.Background>
     <Grid>
-        <Menu Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}">
+        <Menu Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
             <MenuItem Header="File"></MenuItem>
 
             <MenuItem Header="Registros">
