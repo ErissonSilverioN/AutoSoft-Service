@@ -1,0 +1,96 @@
+﻿<Window x:Class="Proyecto_MantenimientoVehicular.UI.Registros.rCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto_MantenimientoVehicular.UI.Registros"
+        mc:Ignorable="d"
+        Title="Registro de Clientes" Height="380" Width="610" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="ClienteId" HorizontalAlignment="Left" Margin="22,26,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="18,118,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Teléfono" HorizontalAlignment="Left" Margin="18,151,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Cédula" HorizontalAlignment="Left" Margin="307,117,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Dirección" HorizontalAlignment="Left" Margin="18,184,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="311,146,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="idTextBox" HorizontalAlignment="Left" Margin="95,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" PreviewTextInput="idTextBox_PreviewTextInput">
+            <TextBox.Text>
+                <Binding Path="ClienteId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox x:Name="nombreTextBox" HorizontalAlignment="Left" Margin="95,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" PreviewTextInput="nombreTextBox_PreviewTextInput">
+            <TextBox.Text>
+                <Binding Path="Nombre" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox x:Name="telefonoTextBox" HorizontalAlignment="Left" Margin="95,157,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="202" PreviewTextInput="telefonoTextBox_PreviewTextInput">
+            <TextBox.Text>
+                <Binding Path="Telefono" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <TextBox x:Name="cedulaTextBox" HorizontalAlignment="Left" Margin="363,120,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="202" PreviewTextInput="cedulaTextBox_PreviewTextInput">
+            <TextBox.Text>
+                <Binding Path="Cedula" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox x:Name="direccionTextBox" HorizontalAlignment="Left" Margin="95,190,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="202" PreviewTextInput="direccionTextBox_PreviewTextInput">
+            <TextBox.Text>
+                <Binding Path="Direccion" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox x:Name="emailTextBox" HorizontalAlignment="Left" Margin="363,151,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="202">
+            <TextBox.Text>
+                <Binding Path="Email" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <Button x:Name="nuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="53,279,0,0" VerticalAlignment="Top" Height="40" Width="116" Click="nuevoButton_Click" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="14">
+
+        </Button>
+        <Button x:Name="guardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="223,277,0,0" VerticalAlignment="Top" Height="43" Width="130" Click="guardarButton_Click" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="14">
+
+        </Button>
+        <Button x:Name="eliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="402,275,0,0" VerticalAlignment="Top" Height="43" Width="126" Click="eliminarButton_Click" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="14">
+
+        </Button>
+        <Button x:Name="buscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="186,26,0,0" VerticalAlignment="Top" Height="30" Width="89" Click="buscarButton_Click" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="14">
+
+        </Button>
+        <Label Content="Fecha" HorizontalAlignment="Left" Margin="389,26,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <DatePicker x:Name="fechaDatePicker" HorizontalAlignment="Left" Margin="442,27,0,0" VerticalAlignment="Top" Width="117">
+            <DatePicker.SelectedDate>
+                <Binding Path="Fecha" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+
+                </Binding>
+            </DatePicker.SelectedDate>
+        </DatePicker>
+    </Grid>
+</Window>

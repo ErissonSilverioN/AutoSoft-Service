@@ -1,0 +1,37 @@
+﻿<Window x:Class="Proyecto_MantenimientoVehicular.UI.Consultas.cVehiculo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto_MantenimientoVehicular.UI.Consultas"
+        mc:Ignorable="d"
+        Title="cVehiculo" Height="450" Width="800">
+    <Grid>
+        <Label Content="Desde" HorizontalAlignment="Left" Margin="15,20,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Hasta" HorizontalAlignment="Left" Margin="133,20,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Filtro" HorizontalAlignment="Left" Margin="254,21,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Criterio" HorizontalAlignment="Center" Margin="0,46,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <DatePicker x:Name="desdeDatePicker" HorizontalAlignment="Left" Margin="19,47,0,0" VerticalAlignment="Top" Width="108"/>
+        <DatePicker x:Name="hastaDatePicker" HorizontalAlignment="Left" Margin="139,47,0,0" VerticalAlignment="Top" Width="108"/>
+        <ComboBox x:Name="filtroComboBox" HorizontalAlignment="Left" Margin="259,48,0,0" VerticalAlignment="Top" Width="104">
+            <ComboBoxItem>Todos</ComboBoxItem>
+            <ComboBoxItem>ID</ComboBoxItem>
+            <ComboBoxItem>Placa</ComboBoxItem>
+            <ComboBoxItem>Año</ComboBoxItem>
+
+        </ComboBox>
+        <TextBox x:Name="criterioTextBox" HorizontalAlignment="Left" Margin="429,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
+        <DataGrid x:Name="consultarDataGrid" Margin="14,80,19,27" ItemsSource="{Binding}" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="VehiculoId"  Binding="{Binding VehiculoId}"/>
+                <DataGridTextColumn Header="Descripcion"  Binding="{Binding Descripcion}"/>
+                <DataGridTextColumn Header="Placa"  Binding="{Binding Placa}"/>
+                <DataGridTextColumn Header="Año"  Binding="{Binding Año}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="consultar1Button" Content="Consulta" HorizontalAlignment="Left" Margin="650,28,0,0" VerticalAlignment="Top" Height="40" Width="128" Click="consultar1Button_Click">
+         
+        </Button>
+
+    </Grid>
+</Window>

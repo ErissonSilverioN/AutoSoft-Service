@@ -1,0 +1,109 @@
+﻿<Window x:Class="Proyecto_MantenimientoVehicular.UI.Registros.rProveedores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto_MantenimientoVehicular.UI.Registros"
+        mc:Ignorable="d"
+        Title="Registro de Proveedores" Height="410" Width="520" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid>
+
+        <Label Content="ProveedorId" HorizontalAlignment="Left" Margin="20,32,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="IdTextBox" HorizontalAlignment="Left" Margin="114,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" PreviewTextInput="IdTextBox_PreviewTextInput">
+            <TextBox.Text>
+                <Binding Path="ProveedorId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+
+
+        <Label Content="Fecha" HorizontalAlignment="Left" Margin="349,35,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="20,147,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Teléfono" HorizontalAlignment="Left" Margin="19,241,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="20,212,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Dirección" HorizontalAlignment="Left" Margin="20,181,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <Label Content="RNC" HorizontalAlignment="Left" Margin="20,106,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <DatePicker x:Name="fechaDatePicker" HorizontalAlignment="Left" Margin="392,36,0,0" VerticalAlignment="Top" Width="99">
+            <DatePicker.SelectedDate>
+                <Binding Path="Fecha" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </DatePicker.SelectedDate>
+        </DatePicker>
+        <Button x:Name="buscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="214,30,0,0" VerticalAlignment="Top" Height="31" Width="89" Click="buscarButton_Click" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="14">
+
+        </Button>
+        <Button x:Name="nuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="49,316,0,0" VerticalAlignment="Top" Height="40" Width="111" Click="nuevoButton_Click" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="14">
+
+        </Button>
+        <Button x:Name="guardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="185,315,0,0" VerticalAlignment="Top" Height="40" Width="124" Click="guardarButton_Click" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="14">
+
+        </Button>
+        <Button x:Name="eliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="329,314,0,0" VerticalAlignment="Top" Height="40" Width="123" Click="eliminarButton_Click" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="14">
+
+        </Button>
+        <TextBox x:Name="nombreTextBox1" HorizontalAlignment="Left" Margin="104,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" PreviewTextInput="nombreTextBox1_PreviewTextInput">
+            <TextBox.Text>
+                <Binding Path="Nombre" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox x:Name="telefonoTextBox1" HorizontalAlignment="Left" Margin="104,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181" PreviewTextInput="telefonoTextBox1_PreviewTextInput">
+            <TextBox.Text>
+                <Binding Path="Telefono" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox x:Name="emailTextBox" HorizontalAlignment="Left" Margin="104,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280">
+            <TextBox.Text>
+                <Binding Path="Email" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox x:Name="rncTextBox" HorizontalAlignment="Left" Margin="104,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" PreviewTextInput="rncTextBox_PreviewTextInput">
+            <TextBox.Text>
+                <Binding Path="RNC" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox x:Name="direccionTextBox" HorizontalAlignment="Left" Margin="104,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" PreviewTextInput="direccionTextBox_PreviewTextInput">
+            <TextBox.Text>
+                <Binding Path="Direccion" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Label Content="# Pedidos" HorizontalAlignment="Left" Margin="355,74,0,0" VerticalAlignment="Top" FontFamily="Bell MT" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="cantidadpedidosTextBox" HorizontalAlignment="Left" Margin="431,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" IsReadOnly="True">
+            <TextBox.Text>
+                <Binding Path="CantidadPedidos" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                    </Binding.ValidationRules>   
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+
+    </Grid>
+</Window>
